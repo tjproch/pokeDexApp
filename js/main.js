@@ -13,6 +13,10 @@ function getPokemon() {
             console.log(data);
             document.querySelector('h2').innerText = data.name;
             document.querySelector('img').src = data.sprites.front_default;
+            document.querySelector('#pokemonType1').innerText = data.types[0].type.name;
+            document.querySelector('#pokemonType2').innerText = data.types[1].type.name;
+            document.querySelector('#pokemonHeight').innerText = data.height;
+            document.querySelector('#pokemonWeight').innerText = data.weight;
 
         })
         .then(err => {
